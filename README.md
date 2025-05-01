@@ -12,17 +12,26 @@ The chess engine is built from scratch following Dr. Bert Huang's [youtube serie
 - Dr. Bert Huang's [YouTube series](https://www.youtube.com/watch?v=rt50SJBZaOk&list=PLUenpfvlyoa0VSYPGou2kW9SSwI0xCgjI)
 - [lichess-bot github](https://github.com/lichess-bot-devs/lichess-bot) for allowing interactive play
 
---
+## To run
+```
+python from homemade import MyLearningBot 
+engine = MyLearningBot() 
+board = chess.Board() 
+engine.search(board) 
+result = engine.search(board) 
+move = result.move board.push(move) 
+board 
+```
+
 
 ## Learning Objective:
-    * The engine needs to learn the relative values of pieces (e.g., pawns, knights, queens) purely though experience--meaning it is not told how much each piece is worth. 
-    * The engine should also be learning the correlations between piece placement and outcomes: 
-        * Even without explicit spatial knowledge, the model hsould gradually learn that having certain pieces on certain squares (e.g., a pawn in the middel) correlates with better rewards or winning outcomes. 
+* The engine needs to learn the relative values of pieces (e.g., pawns, knights, queens) purely though experience--meaning it is not told how much each piece is worth. 
+* The engine should also be learning the correlations between piece placement and outcomes: 
+    * Even without explicit spatial knowledge, the model should gradually learn that having certain pieces on certain squares (e.g., a pawn in the middel) correlates with better rewards or winning outcomes. 
 
 ## Training Perspective: 
-    * The engine learns from the White player's perspective only. 
+* The engine learns from the White player's perspective only. 
     
------
 
 ## 2. State Representation and Action Space
 
@@ -34,17 +43,13 @@ The chess engine is built from scratch following Dr. Bert Huang's [youtube serie
 
 * Therefore, the agent is acting dynamically in a changing environment. 
 
-----
-The model does not have access to the full board layout directly. Instead, it interacts with the environment by evaluating the legal moves available at each step.
 
 ### 2.a How the Model Perceives the Environment
 
 1. The legal moves available to the white engine at the given position
 2. The material difference of the board. 
 3. If white is checkmated.
-----
 
---- 
 ### 2.b. What does the engine *not see*?
 
 The model does not explicitly know how much each piece is worth.
@@ -56,7 +61,6 @@ In addition, the model does not explicitly know **which pieces are on which squa
 - It only knows the available moves. (e.g., it knows that it can move a piece to the c3 square but does not explicitly know which piece is moving.)
 - The model must **infer spatial and piece identity information** through training over time.
 
----
 
 ### 2.c. As a result, the model is not designed to explicitly consider strategies/heuristics like:
 
