@@ -14,7 +14,7 @@ The chess engine is built from scratch following Dr. Bert Huang's [youtube serie
 
 ## To run
 ```
-python from homemade import MyLearningBot 
+from homemade import MyLearningBot 
 engine = MyLearningBot() 
 board = chess.Board() 
 engine.search(board) 
@@ -24,12 +24,12 @@ board
 ```
 
 
-## Learning Objective:
+## Learning Objective
 * The engine needs to learn the relative values of pieces (e.g., pawns, knights, queens) purely though experience--meaning it is not told how much each piece is worth. 
 * The engine should also be learning the correlations between piece placement and outcomes: 
     * Even without explicit spatial knowledge, the model should gradually learn that having certain pieces on certain squares (e.g., a pawn in the middel) correlates with better rewards or winning outcomes. 
 
-## Training Perspective: 
+## Training Perspective
 * The engine learns from the White player's perspective only. 
     
 
@@ -158,7 +158,7 @@ The model's architecture is delibertly simple to focus learning purely on reward
 --- 
 
 
-## 5. Model Performance
+## 5. Model Training
 
 * The model was trained over 120,000 total games
 * The model trained for over 18 hours
