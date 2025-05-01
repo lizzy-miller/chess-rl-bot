@@ -12,3 +12,7 @@ LearningEngine_FEN_test.py
 LearngEngine_test.py
 LearningEngineNN.py
 training_loop.py
+data/
+slurm/
+plot_results.py
+

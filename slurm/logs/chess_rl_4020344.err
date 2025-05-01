@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/sfs/gpfs/tardis/home/zrc3hc/CHESS_RL_RIV/LearningEngine_FEN.py", line 353, in <module>
-    last_board = white_positions[-1].copy()
-                 ~~~~~~~~~~~~~~~^^^^
-IndexError: list index out of range
