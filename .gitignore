@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pt
+*.json
+m*_weights/
+m*_results/
+m*_epsilon/
+*.ipynb_checkpoints/
+.env
+*.DS_Store
+LearningEngine_FEN_test.py
+LearngEngine_test.py
+LearningEngineNN.py
+training_loop.py
